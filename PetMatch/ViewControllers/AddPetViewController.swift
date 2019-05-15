@@ -111,8 +111,9 @@ class AddPetViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             let data = addImageButton.currentImage?.jpegData(compressionQuality: 1.0) ?? Data()
             let storageRef = storage.reference()
             // Create a reference to the file you want to upload
-            let uniqueID = UUID()
-            let imageRef = storageRef.child("images/" + self.pet.name + uniqueID.uuidString + ".jpg")
+            let uniqueID = UUID().uuidString
+            
+            let imageRef = storageRef.child("images/" + self.pet.name + uniqueID + ".jpg")
             
             let uploadTask = imageRef.putData(data, metadata: nil) { (metadata, error) in
                 guard let metadata = metadata else {

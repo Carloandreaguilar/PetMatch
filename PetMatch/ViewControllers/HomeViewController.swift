@@ -94,6 +94,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         } else {
             cell.ageLabel.text = (cell.ageLabel.text ?? "") + String(ageComponents.month ?? 0) + " months"
         }
+        cell.ageLabel.text = (cell.ageLabel.text ?? "") + " old"
         
         cell.genderImageView.image = UIImage(named: pet.gender)
         
