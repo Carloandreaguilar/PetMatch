@@ -47,17 +47,4 @@ class FirebaseData{
             }
         }
     }
-    
-//    func retrieveAndSavePetPicture(photoURL: String, key: String) -> UIImage {
-//        let storageRef = self.storage.reference(forURL: photoURL)
-//        var pic: UIImage? = nil
-//        storageRef.getData(maxSize: 10 * 1024 *  1024) { (data, error) -> Void in
-//            if let imgData = data {
-//                pic = UIImage(data: imgData) ?? UIImage()
-//                let petPic = PetImage(key: key, image: pic ?? UIImage() )
-//                self.allPetImages.append(petPic)
-//            }
-//            return pic
-//        }
-//    }
 }
