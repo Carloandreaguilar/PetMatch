@@ -32,7 +32,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         if error == nil {
             FirebaseData.shared.updateData{
                 DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "signupToHome", sender: self)
+                    FirebaseData.shared.loadFirstPicture{
+                        DispatchQueue.main.async {
+                            self.performSegue(withIdentifier: "signupToHome", sender: nil)
+                        }
+                    }
+                    
                 }
             }
         }

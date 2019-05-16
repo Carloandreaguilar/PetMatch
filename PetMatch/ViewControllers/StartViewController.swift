@@ -34,8 +34,13 @@ class StartViewController: UIViewController, UITextFieldDelegate,GIDSignInDelega
                 self.activityIndicator.startAnimating()
                 FirebaseData.shared.updateData{
                     DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "alreadyLoggedIn", sender: nil)
-                        self.activityIndicator.stopAnimating()
+                        FirebaseData.shared.loadFirstPicture{
+                            DispatchQueue.main.async {
+                                self.performSegue(withIdentifier: "alreadyLoggedIn", sender: nil)
+                                self.activityIndicator.stopAnimating()
+                            }
+                        }
+                        
                     }
                 }
             }
@@ -77,8 +82,13 @@ class StartViewController: UIViewController, UITextFieldDelegate,GIDSignInDelega
             }
             FirebaseData.shared.updateData{
                 DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "alreadyLoggedIn", sender: nil)
-                    self.activityIndicator.stopAnimating()
+                    FirebaseData.shared.loadFirstPicture{
+                        DispatchQueue.main.async {
+                            self.performSegue(withIdentifier: "alreadyLoggedIn", sender: nil)
+                            self.activityIndicator.stopAnimating()
+                        }
+                    }
+                    
                 }
             }
         })
