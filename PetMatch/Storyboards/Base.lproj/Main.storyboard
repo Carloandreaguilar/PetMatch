@@ -104,24 +104,24 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="HXn-bO-2tX">
-                                <rect key="frame" x="199" y="698" width="16" height="96"/>
+                                <rect key="frame" x="96.5" y="680" width="221" height="114"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ww-3W-5BI" customClass="RoundedCornerButton" customModule="PetMatch" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="16" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="221" height="22"/>
                                         <state key="normal" image="phone"/>
                                         <connections>
                                             <action selector="phoneSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hQI-fW-YAd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zkd-jo-e6F" customClass="RoundedCornerButton" customModule="PetMatch" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="37" width="16" height="22"/>
+                                        <rect key="frame" x="0.0" y="37" width="221" height="22"/>
                                         <state key="normal" image="fb"/>
                                         <connections>
                                             <action selector="facebookSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wog-jl-vhd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dk5-jT-nRE" customClass="RoundedCornerButton" customModule="PetMatch" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="74" width="16" height="22"/>
+                                        <rect key="frame" x="0.0" y="74" width="221" height="40"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <state key="normal" image="google">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -408,21 +408,21 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cd3-aV-E7R" userLabel="Pet Card View">
                                                     <rect key="frame" x="0.0" y="0.0" width="413" height="523.5"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sjw-dG-bbJ">
-                                                            <rect key="frame" x="72" y="30" width="269" height="235.5"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sjw-dG-bbJ" customClass="PetImageView" customModule="PetMatch" customModuleProvider="target">
+                                                            <rect key="frame" x="72" y="10" width="269" height="235.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Sjw-dG-bbJ" secondAttribute="height" multiplier="80:70" id="Ler-l1-tg3"/>
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yyY-uJ-u6U">
-                                                            <rect key="frame" x="100.5" y="285.5" width="223.5" height="77.5"/>
+                                                            <rect key="frame" x="100.5" y="260.5" width="223.5" height="69"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3Dz-ph-OVt">
                                                                     <rect key="frame" x="0.0" y="0.0" width="223.5" height="50"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F61-JZ-yhD">
-                                                                            <rect key="frame" x="0.0" y="12.5" width="165.5" height="25.5"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                                            <rect key="frame" x="0.0" y="14.5" width="165.5" height="21.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -432,37 +432,44 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKA-gU-L5X">
-                                                                    <rect key="frame" x="0.0" y="58" width="223.5" height="19.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                    <rect key="frame" x="0.0" y="58" width="223.5" height="11"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YF-sm-PpP">
-                                                            <rect key="frame" x="100.5" y="383" width="223.5" height="110.5"/>
+                                                            <rect key="frame" x="100.5" y="329.5" width="223.5" height="134"/>
                                                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim a</string>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="t3N-VF-E1R">
-                                                            <rect key="frame" x="196.5" y="138" width="20" height="20"/>
+                                                            <rect key="frame" x="196.5" y="118" width="20" height="20"/>
                                                         </activityIndicatorView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMZ-Xq-XCr">
+                                                            <rect key="frame" x="182.5" y="473.5" width="48" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <state key="normal" title="Match!"/>
+                                                        </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="t3N-VF-E1R" firstAttribute="centerY" secondItem="Sjw-dG-bbJ" secondAttribute="centerY" id="9yH-bm-vlv"/>
                                                         <constraint firstItem="yyY-uJ-u6U" firstAttribute="trailing" secondItem="Sjw-dG-bbJ" secondAttribute="trailing" multiplier="0.95" id="AqM-fz-JVk"/>
-                                                        <constraint firstAttribute="bottom" secondItem="7YF-sm-PpP" secondAttribute="bottom" constant="30" id="NUE-3t-nd4"/>
+                                                        <constraint firstAttribute="bottom" secondItem="dMZ-Xq-XCr" secondAttribute="bottom" constant="20" id="Eng-4G-upt"/>
+                                                        <constraint firstItem="dMZ-Xq-XCr" firstAttribute="centerX" secondItem="Cd3-aV-E7R" secondAttribute="centerX" id="NYs-Zj-vmk"/>
                                                         <constraint firstItem="Sjw-dG-bbJ" firstAttribute="height" secondItem="Cd3-aV-E7R" secondAttribute="height" multiplier="0.45" id="NgQ-JB-GHu"/>
                                                         <constraint firstItem="Sjw-dG-bbJ" firstAttribute="centerX" secondItem="Cd3-aV-E7R" secondAttribute="centerX" id="TFa-Ij-nMU"/>
+                                                        <constraint firstItem="dMZ-Xq-XCr" firstAttribute="top" secondItem="7YF-sm-PpP" secondAttribute="bottom" constant="10" id="evP-Qo-wlN"/>
                                                         <constraint firstItem="yyY-uJ-u6U" firstAttribute="leading" secondItem="Sjw-dG-bbJ" secondAttribute="leading" multiplier="1.4" id="hBf-CU-3WX"/>
                                                         <constraint firstItem="7YF-sm-PpP" firstAttribute="leading" secondItem="yyY-uJ-u6U" secondAttribute="leading" id="lbw-uw-FYX"/>
-                                                        <constraint firstItem="7YF-sm-PpP" firstAttribute="top" secondItem="yyY-uJ-u6U" secondAttribute="bottom" constant="20" id="mL9-O3-4K8"/>
+                                                        <constraint firstItem="7YF-sm-PpP" firstAttribute="top" secondItem="yyY-uJ-u6U" secondAttribute="bottom" id="mL9-O3-4K8"/>
                                                         <constraint firstItem="7YF-sm-PpP" firstAttribute="trailing" secondItem="yyY-uJ-u6U" secondAttribute="trailing" id="mdk-Wd-EHc"/>
-                                                        <constraint firstItem="yyY-uJ-u6U" firstAttribute="top" secondItem="Sjw-dG-bbJ" secondAttribute="bottom" constant="20" id="nXy-Yn-Afj"/>
-                                                        <constraint firstItem="Sjw-dG-bbJ" firstAttribute="top" secondItem="Cd3-aV-E7R" secondAttribute="top" constant="30" id="sij-yY-tru"/>
+                                                        <constraint firstItem="yyY-uJ-u6U" firstAttribute="top" secondItem="Sjw-dG-bbJ" secondAttribute="bottom" constant="15" id="nXy-Yn-Afj"/>
+                                                        <constraint firstItem="Sjw-dG-bbJ" firstAttribute="top" secondItem="Cd3-aV-E7R" secondAttribute="top" constant="10" id="sij-yY-tru"/>
                                                         <constraint firstItem="t3N-VF-E1R" firstAttribute="centerX" secondItem="Sjw-dG-bbJ" secondAttribute="centerX" id="wub-Mj-ieC"/>
                                                     </constraints>
                                                 </view>
@@ -481,6 +488,7 @@
                                             <outlet property="ageLabel" destination="kKA-gU-L5X" id="5gF-fH-Trk"/>
                                             <outlet property="descriptionTextView" destination="7YF-sm-PpP" id="hnv-MN-YGk"/>
                                             <outlet property="genderImageView" destination="8qH-EP-qPg" id="Q9D-vZ-Aiv"/>
+                                            <outlet property="matchButton" destination="dMZ-Xq-XCr" id="NWW-yl-ccj"/>
                                             <outlet property="nameLabel" destination="F61-JZ-yhD" id="EpL-BO-bWP"/>
                                             <outlet property="petImageView" destination="Sjw-dG-bbJ" id="iCu-tW-k8l"/>
                                         </connections>

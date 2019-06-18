@@ -17,6 +17,7 @@ class PetCardCell: UICollectionViewCell {
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var matchButton: UIButton!
     
     
     override func awakeFromNib() {

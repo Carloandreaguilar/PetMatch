@@ -13,6 +13,8 @@
 		0E972E842215C68600F6BE95 /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E972E832215C68600F6BE95 /* RoundedCornerButton.swift */; };
 		6547E05B73C36F2C9A1BE5AE /* Pods_PetMatchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5A7DF4B193625A79073052 /* Pods_PetMatchTests.framework */; };
 		68A1E13C2210E78D0022EC81 /* AddPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A1E13B2210E78D0022EC81 /* AddPetViewController.swift */; };
+		68AA506422B612ED00C542FF /* PetImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AA506322B612ED00C542FF /* PetImageView.swift */; };
+		68AA506622B613F000C542FF /* ZoomAndSnapFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AA506522B613F000C542FF /* ZoomAndSnapFlowLayout.swift */; };
 		68C03EE6220F5DC00012F714 /* PetCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C03EE5220F5DC00012F714 /* PetCardCell.swift */; };
 		68C03EE9220F73640012F714 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C03EE8220F73640012F714 /* Pet.swift */; };
 		68C03EEB220F75400012F714 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C03EEA220F75400012F714 /* User.swift */; };
@@ -62,6 +64,8 @@
 		51D33DACA416AB878C94D7FA /* Pods_PetMatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetMatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		566B209678FA5518A485CBA3 /* Pods-PetMatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetMatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PetMatch/Pods-PetMatch.debug.xcconfig"; sourceTree = "<group>"; };
 		68A1E13B2210E78D0022EC81 /* AddPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetViewController.swift; sourceTree = "<group>"; };
+		68AA506322B612ED00C542FF /* PetImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetImageView.swift; sourceTree = "<group>"; };
+		68AA506522B613F000C542FF /* ZoomAndSnapFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAndSnapFlowLayout.swift; sourceTree = "<group>"; };
 		68C03EE5220F5DC00012F714 /* PetCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCardCell.swift; sourceTree = "<group>"; };
 		68C03EE8220F73640012F714 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		68C03EEA220F75400012F714 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -226,6 +230,8 @@
 				68C03EEE220F81AE0012F714 /* FloatingButton.swift */,
 				8DA81D9E220DC467002AA668 /* LDGradientView.swift */,
 				0E972E832215C68600F6BE95 /* RoundedCornerButton.swift */,
+				68AA506322B612ED00C542FF /* PetImageView.swift */,
+				68AA506522B613F000C542FF /* ZoomAndSnapFlowLayout.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -533,8 +539,10 @@
 				8DA81DA6220DE1E7002AA668 /* HomeViewController.swift in Sources */,
 				8DA40B2B220C9D2C00AC0484 /* StartViewController.swift in Sources */,
 				0E6A0492228B139600FD0F94 /* FirebaseData.swift in Sources */,
+				68AA506422B612ED00C542FF /* PetImageView.swift in Sources */,
 				0E6A0496228B47F000FD0F94 /* SplashScreenViewController.swift in Sources */,
 				68C03EEB220F75400012F714 /* User.swift in Sources */,
+				68AA506622B613F000C542FF /* ZoomAndSnapFlowLayout.swift in Sources */,
 				0E6A0494228B252C00FD0F94 /* PetImage.swift in Sources */,
 				8DA40B29220C9D2C00AC0484 /* AppDelegate.swift in Sources */,
 				0E972E842215C68600F6BE95 /* RoundedCornerButton.swift in Sources */,
