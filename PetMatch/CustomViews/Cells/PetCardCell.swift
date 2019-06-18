@@ -35,9 +35,6 @@ class PetCardCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         self.layer.cornerRadius = 10
-//        self.layer.shadowRadius = 7
-//        self.layer.shadowOffset = CGSize(width: 0, height: 15)
-//        self.layer.shadowOpacity = 0.6
     }
     
 }

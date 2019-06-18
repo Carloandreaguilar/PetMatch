@@ -11,7 +11,9 @@ import UIKit
 class PetImageView: UIImageView {
     
     override func layoutSubviews() {
-        self.layer.cornerRadius = 10
+        super.layoutSubviews()
+        self.layer.cornerRadius = 7
+         self.clipsToBounds = true
     }
     
     /*
