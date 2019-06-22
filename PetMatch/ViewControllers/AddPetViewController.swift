@@ -17,28 +17,20 @@ class AddPetViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var birthdatePicker: UIDatePicker!
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var descriptionText: UITextView!
+    @IBOutlet weak var locationTextField: UITextField!
     
     let genders = ["Male","Female"]
-    let types = ["Cat","Dog", "Hamster"]
+    let types = ["Cat","Dog", "Hamster", "Rabbit"]
     var image = UIImage()
     
     var imagePicker = UIImagePickerController()
-    var pet = Pet(key:  "" ,type: "Cat", name: "", birthdate: "", about: "", gender: "Male", owner: "", photo: "" )
+    var pet = Pet(key:  "" ,type: "Cat", name: "", birthdate: "", about: "", gender: "Male", owner: "", photo: "")
     var petGender = ""
     var petType = ""
     let ref = Database.database().reference(withPath: "Pets")
     let usersRef = Database.database().reference(withPath: "Users")
     let storage = Storage.storage()
     let dateFormatter = DateFormatter()
-    
-    
-    
-    @IBAction func photoFromLibrary(_ sender: UIButton) {
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
-        present(imagePicker, animated: true, completion: nil)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,8 +42,17 @@ class AddPetViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             self.nameText.text = pet.name
             self.descriptionText.text = pet.about
             self.birthdatePicker.date = dateFormatter.date(from: pet.birthdate) ?? Date()
+            
         }
     }
+    
+    @IBAction func photoFromLibrary(_ sender: UIButton) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

@@ -22,6 +22,8 @@
 		68C03EEF220F81AE0012F714 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C03EEE220F81AE0012F714 /* FloatingButton.swift */; };
 		68C03EF1220F85E90012F714 /* PetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C03EF0220F85E90012F714 /* PetsViewController.swift */; };
 		68D7271A3A4DB831883F1406 /* Pods_PetMatchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C7E52B61C2A8871C1998B0 /* Pods_PetMatchUITests.framework */; };
+		8D00FB4322BA981E0073146B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D00FB4222BA981E0073146B /* ChatViewController.swift */; };
+		8D00FB7322BABE760073146B /* ChatFrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D00FB7222BABE760073146B /* ChatFrameViewController.swift */; };
 		8DA40B29220C9D2C00AC0484 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA40B28220C9D2C00AC0484 /* AppDelegate.swift */; };
 		8DA40B2B220C9D2C00AC0484 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA40B2A220C9D2C00AC0484 /* StartViewController.swift */; };
 		8DA40B2E220C9D2C00AC0484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA40B2C220C9D2C00AC0484 /* Main.storyboard */; };
@@ -34,6 +36,10 @@
 		8DA81DA6220DE1E7002AA668 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA81DA5220DE1E7002AA668 /* HomeViewController.swift */; };
 		8DA81DA8220DE1FA002AA668 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA81DA7220DE1FA002AA668 /* SignUpViewController.swift */; };
 		8DA9F0202220837C0035DF48 /* LoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F01F2220837C0035DF48 /* LoveViewController.swift */; };
+		8DB39BAF22BD1C0900C7ECD5 /* MyPetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB39BAE22BD1C0900C7ECD5 /* MyPetsTableViewCell.swift */; };
+		8DB39BB122BD64CD00C7ECD5 /* LoversTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB39BB022BD64CD00C7ECD5 /* LoversTableViewCell.swift */; };
+		8DB39BB422BD7CF300C7ECD5 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB39BB322BD7CF300C7ECD5 /* RoundedImageView.swift */; };
+		8DB39BB622BD7E1700C7ECD5 /* ShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB39BB522BD7E1700C7ECD5 /* ShadowImageView.swift */; };
 		F49DF054F93D81C959325A03 /* Pods_PetMatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D33DACA416AB878C94D7FA /* Pods_PetMatch.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +78,8 @@
 		68C03EEC220F7F400012F714 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		68C03EEE220F81AE0012F714 /* FloatingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		68C03EF0220F85E90012F714 /* PetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsViewController.swift; sourceTree = "<group>"; };
+		8D00FB4222BA981E0073146B /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		8D00FB7222BABE760073146B /* ChatFrameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatFrameViewController.swift; sourceTree = "<group>"; };
 		8DA40B25220C9D2C00AC0484 /* PetMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA40B28220C9D2C00AC0484 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DA40B2A220C9D2C00AC0484 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +99,10 @@
 		8DA81DA7220DE1FA002AA668 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8DA9F01F2220837C0035DF48 /* LoveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveViewController.swift; sourceTree = "<group>"; };
 		8DAA345E221606B500C94666 /* PetMatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PetMatch.entitlements; sourceTree = "<group>"; };
+		8DB39BAE22BD1C0900C7ECD5 /* MyPetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetsTableViewCell.swift; sourceTree = "<group>"; };
+		8DB39BB022BD64CD00C7ECD5 /* LoversTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoversTableViewCell.swift; sourceTree = "<group>"; };
+		8DB39BB322BD7CF300C7ECD5 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		8DB39BB522BD7E1700C7ECD5 /* ShadowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowImageView.swift; sourceTree = "<group>"; };
 		90888910C03C9154D7B0B19B /* Pods-PetMatchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetMatchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PetMatchTests/Pods-PetMatchTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF07EF9A280644B316DA7AF3 /* Pods-PetMatchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetMatchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PetMatchTests/Pods-PetMatchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF5A7DF4B193625A79073052 /* Pods_PetMatchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetMatchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				68C03EE5220F5DC00012F714 /* PetCardCell.swift */,
+				8DB39BAE22BD1C0900C7ECD5 /* MyPetsTableViewCell.swift */,
+				8DB39BB022BD64CD00C7ECD5 /* LoversTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -168,6 +182,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8D00FB4122BA8EA90073146B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8DAA345E221606B500C94666 /* PetMatch.entitlements */,
+				8DA40B28220C9D2C00AC0484 /* AppDelegate.swift */,
+				8DA40B34220C9D2F00AC0484 /* Info.plist */,
+				8DA40B58220CA01400AC0484 /* GoogleService-Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		8DA40B1C220C9D2C00AC0484 = {
 			isa = PBXGroup;
 			children = (
@@ -193,14 +218,11 @@
 		8DA40B27220C9D2C00AC0484 /* PetMatch */ = {
 			isa = PBXGroup;
 			children = (
-				8DAA345E221606B500C94666 /* PetMatch.entitlements */,
-				8DA81DA3220DE1AA002AA668 /* Storyboards */,
-				8DA81DA2220DE197002AA668 /* ViewControllers */,
+				8D00FB4122BA8EA90073146B /* App */,
 				68C03EE7220F72E50012F714 /* Model */,
-				8DA81D9D220DC467002AA668 /* CustomViews */,
+				8DB39BB222BD6B8700C7ECD5 /* Views */,
+				8DA81DA2220DE197002AA668 /* ViewControllers */,
 				8DA81DA4220DE1BD002AA668 /* Utilities */,
-				8DA40B58220CA01400AC0484 /* GoogleService-Info.plist */,
-				8DA40B34220C9D2F00AC0484 /* Info.plist */,
 			);
 			path = PetMatch;
 			sourceTree = "<group>";
@@ -232,6 +254,8 @@
 				0E972E832215C68600F6BE95 /* RoundedCornerButton.swift */,
 				68AA506322B612ED00C542FF /* PetImageView.swift */,
 				68AA506522B613F000C542FF /* ZoomAndSnapFlowLayout.swift */,
+				8DB39BB322BD7CF300C7ECD5 /* RoundedImageView.swift */,
+				8DB39BB522BD7E1700C7ECD5 /* ShadowImageView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -239,6 +263,7 @@
 		8DA81DA2220DE197002AA668 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8D00FB4222BA981E0073146B /* ChatViewController.swift */,
 				8DA40B2A220C9D2C00AC0484 /* StartViewController.swift */,
 				8DA81DA5220DE1E7002AA668 /* HomeViewController.swift */,
 				8DA81DA7220DE1FA002AA668 /* SignUpViewController.swift */,
@@ -247,6 +272,7 @@
 				68A1E13B2210E78D0022EC81 /* AddPetViewController.swift */,
 				8DA9F01F2220837C0035DF48 /* LoveViewController.swift */,
 				0E6A0495228B47F000FD0F94 /* SplashScreenViewController.swift */,
+				8D00FB7222BABE760073146B /* ChatFrameViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -263,10 +289,18 @@
 		8DA81DA4220DE1BD002AA668 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				8DA40B28220C9D2C00AC0484 /* AppDelegate.swift */,
 				8DA40B2F220C9D2F00AC0484 /* Assets.xcassets */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		8DB39BB222BD6B8700C7ECD5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8DA81DA3220DE1AA002AA668 /* Storyboards */,
+				8DA81D9D220DC467002AA668 /* CustomViews */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,7 +452,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PetMatch/Pods-PetMatch-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PetMatch/Pods-PetMatch-resources.sh",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -429,7 +463,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PetMatch/Pods-PetMatch-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PetMatch/Pods-PetMatch-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		57433AF973B7AC6CFF50EFD3 /* [CP] Embed Pods Frameworks */ = {
@@ -440,10 +474,12 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PetMatch/Pods-PetMatch-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PetMatch/Pods-PetMatch-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -454,12 +490,14 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PetMatch/Pods-PetMatch-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PetMatch/Pods-PetMatch-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8149FF5319F3D1BE4FB71DB4 /* [CP] Check Pods Manifest.lock */ = {
@@ -535,15 +573,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB39BB122BD64CD00C7ECD5 /* LoversTableViewCell.swift in Sources */,
 				8DA81DA8220DE1FA002AA668 /* SignUpViewController.swift in Sources */,
 				8DA81DA6220DE1E7002AA668 /* HomeViewController.swift in Sources */,
+				8DB39BB622BD7E1700C7ECD5 /* ShadowImageView.swift in Sources */,
 				8DA40B2B220C9D2C00AC0484 /* StartViewController.swift in Sources */,
 				0E6A0492228B139600FD0F94 /* FirebaseData.swift in Sources */,
 				68AA506422B612ED00C542FF /* PetImageView.swift in Sources */,
 				0E6A0496228B47F000FD0F94 /* SplashScreenViewController.swift in Sources */,
 				68C03EEB220F75400012F714 /* User.swift in Sources */,
+				8DB39BB422BD7CF300C7ECD5 /* RoundedImageView.swift in Sources */,
 				68AA506622B613F000C542FF /* ZoomAndSnapFlowLayout.swift in Sources */,
 				0E6A0494228B252C00FD0F94 /* PetImage.swift in Sources */,
+				8DB39BAF22BD1C0900C7ECD5 /* MyPetsTableViewCell.swift in Sources */,
 				8DA40B29220C9D2C00AC0484 /* AppDelegate.swift in Sources */,
 				0E972E842215C68600F6BE95 /* RoundedCornerButton.swift in Sources */,
 				8DA9F0202220837C0035DF48 /* LoveViewController.swift in Sources */,
@@ -553,6 +595,8 @@
 				68C03EED220F7F400012F714 /* TabBarViewController.swift in Sources */,
 				68C03EE6220F5DC00012F714 /* PetCardCell.swift in Sources */,
 				68C03EF1220F85E90012F714 /* PetsViewController.swift in Sources */,
+				8D00FB4322BA981E0073146B /* ChatViewController.swift in Sources */,
+				8D00FB7322BABE760073146B /* ChatFrameViewController.swift in Sources */,
 				68C03EEF220F81AE0012F714 /* FloatingButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -731,8 +775,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PetMatch/PetMatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2XPCZBW8PZ;
-				INFOPLIST_FILE = PetMatch/Info.plist;
+				DEVELOPMENT_TEAM = 8468U436K8;
+				INFOPLIST_FILE = "$(SRCROOT)/PetMatch/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -752,8 +796,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PetMatch/PetMatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2XPCZBW8PZ;
-				INFOPLIST_FILE = PetMatch/Info.plist;
+				DEVELOPMENT_TEAM = 8468U436K8;
+				INFOPLIST_FILE = "$(SRCROOT)/PetMatch/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

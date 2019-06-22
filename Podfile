@@ -12,6 +12,7 @@ pod 'GoogleSignIn'
 pod ‘Firebase/Auth’
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
+pod ‘JSQMessagesViewController’
 
   target 'PetMatchTests' do
     inherit! :search_paths
