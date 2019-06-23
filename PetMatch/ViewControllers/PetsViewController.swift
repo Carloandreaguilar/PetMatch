@@ -21,11 +21,6 @@ class PetsViewController: UIViewController {
   let petRef = Database.database().reference(withPath: "Pets")
   let dateFormatter = DateFormatter()
   
-  @IBAction func addButton(_ sender: UIButton) {
-    
-    Analytics.logEvent("addNewPetButton", parameters: [:])
-    
-  }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "editPet" {

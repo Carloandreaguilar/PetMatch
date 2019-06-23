@@ -16,6 +16,7 @@ class FirebaseData{
     let storage = Storage.storage()
     var allPets: [Pet] = []
     var allPetImages: [PetImage] = []
+    var matchedPets: [Int] = []
     
     
     func updateData(finished: @escaping () -> ()){

@@ -10,75 +10,46 @@ import UIKit
 import Firebase
 
 class LoveViewController: UIViewController {
-  
-  
-  @IBOutlet weak var loversTableView: UITableView!
-  
-  var lovers:[Pet] = []
-  let loversTableViewCell = "LoversCell"
-  let storage = Storage.storage()
-  var user: User!
-  let usersRef = Database.database().reference(withPath: "Users")
-  let petRef = Database.database().reference(withPath: "Pets")
-  let dateFormatter = DateFormatter()
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
-  
+    
+    var selectedIndex = 0
+    
+    @IBOutlet weak var loversTableView: UITableView!
+    
+    let loversTableViewCellIdentifier = "LoversCell"
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.loversTableView.reloadData()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationViewController = segue.destination as? ChatFrameViewController {
+            destinationViewController.name = FirebaseData.shared.allPets[FirebaseData.shared.matchedPets[self.selectedIndex]].name
+            destinationViewController.photo = FirebaseData.shared.allPetImages[FirebaseData.shared.matchedPets[self.selectedIndex]].image ?? UIImage()
+        }
+    }
 }
 
 
-
 extension LoveViewController: UITableViewDelegate, UITableViewDataSource{
-  
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return self.lovers.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: self.loversTableViewCell, for: indexPath) as? MyPetsTableViewCell else {
-      return UITableViewCell()
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return FirebaseData.shared.matchedPets.count
     }
     
-    let pet = lovers[indexPath.row]
-    
-    cell.petNameLabel.text = pet.name
-    
-    if FirebaseData.shared.allPetImages.count > indexPath.row{
-      for petImage in FirebaseData.shared.allPetImages{
-        if petImage.key == pet.key{
-          cell.petImage.image = petImage.image
-          break
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: self.loversTableViewCellIdentifier, for: indexPath) as? LoversTableViewCell else {
+            return UITableViewCell()
         }
-      }
-      
-      if cell.petImage.image == nil {
-        let storageRef = FirebaseData.shared.storage.reference(forURL: pet.photo)
-        storageRef.getData(maxSize: 10 * 1024 *  1024) { (data, error) -> Void in
-          if let imgData = data {
-            let pic = UIImage(data: imgData)
-            cell.petImage.image = pic
-            let petPic = PetImage(key: pet.key, image: pic ?? UIImage())
-            FirebaseData.shared.allPetImages.append(petPic)
-          }
-        }
-      }
-    }
-    else {
-      let storageRef = FirebaseData.shared.storage.reference(forURL: pet.photo)
-      storageRef.getData(maxSize: 10 * 1024 *  1024) { (data, error) -> Void in
-        if let imgData = data {
-          let pic = UIImage(data: imgData)
-          cell.petImage.image = pic
-          let petPic = PetImage(key: pet.key, image: pic ?? UIImage())
-          FirebaseData.shared.allPetImages.append(petPic)
-        }
-      }
+        cell.loverImage.image = FirebaseData.shared.allPetImages[FirebaseData.shared.matchedPets[indexPath.row]].image
+        cell.loverName.text = FirebaseData.shared.allPets[FirebaseData.shared.matchedPets[indexPath.row]].name
+        return cell
     }
     
-    return cell
-    
-  }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedIndex = indexPath.row
+    }
 }

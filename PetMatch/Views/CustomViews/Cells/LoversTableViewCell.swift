@@ -10,7 +10,7 @@ import UIKit
 
 class LoversTableViewCell: UITableViewCell {
 
-  
-  @IBOutlet weak var loverNameLabel: UILabel!
-  @IBOutlet weak var loverImage: UIImageView!
+
+    @IBOutlet weak var loverName: UILabel!
+    @IBOutlet weak var loverImage: UIImageView!
 }

@@ -10,10 +10,15 @@ import UIKit
 
 class ChatFrameViewController: UIViewController {
 
+    @IBOutlet weak var petNameLabel: UILabel!
+    @IBOutlet weak var petIconChat: RoundedImageView!
+    var name = ""
+    var photo = UIImage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        navigationItem.largeTitleDisplayMode = .never
+        self.petIconChat.image = self.photo
+        self.petNameLabel.text = self.name
     }
     
 

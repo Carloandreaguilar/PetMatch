@@ -12,9 +12,8 @@ import GoogleSignIn
 
 class HomeViewController: UIViewController {
   
-  var lovePet: [Pet] = []
-  
-  
+  var selectedIndex = 0
+    
   @IBOutlet weak var petCollectionView: UICollectionView!
   
   @IBAction func logOutAction(_ sender: UIBarButtonItem) {
@@ -62,13 +61,27 @@ class HomeViewController: UIViewController {
   func setImageFromURL(url: String){
     
   }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationViewController = segue.destination as? ChatFrameViewController {
+            destinationViewController.name = FirebaseData.shared.allPets[self.selectedIndex].name
+            destinationViewController.photo = FirebaseData.shared.allPetImages[self.selectedIndex].image ?? UIImage()
+        }
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return FirebaseData.shared.allPets.count
   }
-  
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.selectedIndex = indexPath.row
+        if !FirebaseData.shared.matchedPets.contains(indexPath.row) {
+            FirebaseData.shared.matchedPets.append(indexPath.row)
+        }
+        self.performSegue(withIdentifier: "chatSegue", sender: self)
+    }
+    
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PetCardCell", for: indexPath) as? PetCardCell else {
       return UICollectionViewCell()
@@ -147,57 +160,5 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     super.viewDidLayoutSubviews()
     self.petCollectionView.collectionViewLayout = ZoomAndSnapFlowLayout(collectionViewFrame: self.petCollectionView.frame)
   }
-  
-  //    private func configureCollectionViewLayoutItemSize() {
-  //        let inset: CGFloat = 40
-  //        collectionViewFlowLayout.sectionInset = UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
-  //        self.collectionViewFlowLayout.itemSize = CGSize(width: self.petCollectionView.collectionViewLayout.collectionView!.frame.size.width - inset * 2, height: self.petCollectionView.collectionViewLayout.collectionView!.frame.size.height - inset/2)
-  //    }
-  //
-  //    private func indexOfMajorCell() -> Int {
-  //        let itemWidth = collectionViewFlowLayout.itemSize.width
-  //        let proportionalOffset = self.petCollectionView.collectionViewLayout.collectionView!.contentOffset.x / itemWidth
-  //        let index = Int(round(proportionalOffset))
-  //        let numberOfItems = self.petCollectionView.numberOfItems(inSection: 0)
-  //        let safeIndex = max(0, min(numberOfItems - 1, index))
-  //        return safeIndex
-  //    }
-  //
-  //
-  //    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-  //        indexOfCellBeforeDragging = indexOfMajorCell()
-  //    }
-  //
-  //    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-  //        // Stop scrollView sliding:
-  //        targetContentOffset.pointee = scrollView.contentOffset
-  //
-  //        let indexOfMajorCell = self.indexOfMajorCell()
-  //
-  //        let dataSourceCount = collectionView(petCollectionView!, numberOfItemsInSection: 0)
-  //        let swipeVelocityThreshold: CGFloat = 0.5
-  //        let hasEnoughVelocityToSlideToTheNextCell = indexOfCellBeforeDragging + 1 < dataSourceCount && velocity.x > swipeVelocityThreshold
-  //        let hasEnoughVelocityToSlideToThePreviousCell = indexOfCellBeforeDragging - 1 >= 0 && velocity.x < -swipeVelocityThreshold
-  //        let majorCellIsTheCellBeforeDragging = indexOfMajorCell == indexOfCellBeforeDragging
-  //        let didUseSwipeToSkipCell = majorCellIsTheCellBeforeDragging && (hasEnoughVelocityToSlideToTheNextCell || hasEnoughVelocityToSlideToThePreviousCell)
-  //
-  //        if didUseSwipeToSkipCell {
-  //
-  //            let snapToIndex = indexOfCellBeforeDragging + (hasEnoughVelocityToSlideToTheNextCell ? 1 : -1)
-  //            let toValue = collectionViewFlowLayout.itemSize.width * CGFloat(snapToIndex)
-  //            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: velocity.x, options: .allowUserInteraction, animations: {
-  //                scrollView.contentOffset = CGPoint(x: toValue, y: 0)
-  //                scrollView.layoutIfNeeded()
-  //            }, completion: nil)
-  //        } else {
-  //            let indexPath = IndexPath(row: indexOfMajorCell, section: 0)
-  //            petCollectionView.collectionViewLayout.collectionView!.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-  //        }
-  //    }
-  
-  
-  
-  
-  
-  
+
 }

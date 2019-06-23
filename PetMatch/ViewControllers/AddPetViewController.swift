@@ -44,6 +44,17 @@ class AddPetViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             self.birthdatePicker.date = dateFormatter.date(from: pet.birthdate) ?? Date()
             
         }
+        //else {
+//            let storageRef = self.storage.reference(forURL: self.pet.photo)
+//            storageRef.getData(maxSize: 10 * 1024 *  1024) { (data, error) -> Void in
+//                if let imgData = data {
+//                    let pic = UIImage(data: imgData)
+//                    let petPic = PetImage(key: self.pet.key, image: pic ?? UIImage())
+//                     self.addImageButton.setImage(petPic.image, for: UIControl.State.normal)
+//                }
+//            }
+//
+//        }
     }
     
     @IBAction func photoFromLibrary(_ sender: UIButton) {
@@ -142,7 +153,7 @@ class AddPetViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             dateFormatter.dateFormat = "MM-dd-yyyy"
             self.pet.birthdate = dateFormatter.string(from: birthdatePicker.date)
             self.pet.about = self.descriptionText.text ?? ""
-            self.pet.ref?.updateChildValues(["Name": self.pet.name])
+            self.pet.ref?.updateChildValues(["Name": self.pet.name, "Birthdate" : self.pet.birthdate, "About" : self.pet.about])
             
         }
          self.navigationController?.popViewController(animated: true)
